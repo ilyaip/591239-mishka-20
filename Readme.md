@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Ипаткин](https://up.htmlacademy.ru/adaptive/20/user/591239).
-* Наставник: `Неизвестно`.
+* Наставник: [Елизавета Цыгвинцева] (https://htmlacademy.ru/profile/ijwby).
 
 ---
 
