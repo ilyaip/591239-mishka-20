@@ -6,33 +6,32 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-heder__logo" href="#">
-        <img src="" alt="Shop mishka">
+      <a class="page-header__logo">
+        <img src="https://via.placeholder.com/150x150" alt="Shop mishka">
       </a>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list site-list">
-          <li class="main-nav__item">
-            <a class="main-nav__description" href="">Каталог товаров</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__description" href="">Вязание на заказ</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__description" href="">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__description" href="">Корзина: пока пуста</a>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
+        <div class="main-nav__item">
+          <form class="main-nav__form" action="http://echo.htmlacademy.ru/" method="post">
+            <input class="main-nav__input" type="search" name="" value="" placeholder="Поиск по сайту">
+          </form>
+        </div>
+        <div class="main-nav__item">
+          <a class="main-nav__link" href="">Корзина: пока пуста</a>
+        </div>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Изделия ручной работы для дома</h1>
       <section class="catalog">
-        <h2 class="catalog__slogan">Милые штуки ручной работы для дома</h2>
+        <h1 class="catalog__title">Милые штуки ручной работы для дома</h1>
         <ul class="catalog-list">
           <li class="catalog__item">
             <a class="catalog__description" href="">Предметы интерьера</a>
@@ -72,9 +71,9 @@
             </dd>
           </div>
         </dl>
-        <img class="product-week__img" src="" alt="Набор из 3-х корзинок">
+        <img class="product-week__img" src="https://via.placeholder.com/150x150" alt="Набор из 3-х корзинок">
         <p class="product-week__price">Цена: 990 руб.</p>
-        <button class="product-week__button-order button" type="button" name="button">Заказать</button>
+        <a class="product-week__button-order button" href="#">Заказать</a>
       </section>
       <section class="advantages">
         <h2 class="advantages__title">Коротко о нас:</h2>
@@ -100,10 +99,10 @@
         </ul>
       </section>
       <section class="reviews">
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list slider__list">
-            <blockquote class="reviews-item slider__item" cite="http://">
+          <div class="reviews__list slider">
+            <blockquote class="slider__item">
               <p class="reviews__description">
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
                 как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
@@ -111,36 +110,38 @@
                 больше лайков!
               </p>
               <cite class="reviews__name">Анастасия Красильникова</cite>
-              <p class="reviews__social">@misssssiskras</p>
+              <a class="reviews__social" href="#">@misssssiskras</a>
             </blockquote>
           </div>
           <div class="reviews__toggles">
-            <button class="reviews__button-pre reviews__button-pre--arrow" type="button" name="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-            <button class="reviews__button-next reviews__button-next--arrow" type="button" name="button"><span class="visually-hidden">Следующий отзыв</span></button>
+            <button class="reviews__button reviews__button--pre" type="button" name="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__button reviews__button--next" type="button" name="button" aria-label="Следующий отзыв"></button>
           </div>
-          <button class="reviews__button-write button" type="button" name="button">Написать</button>
+          <a class="reviews__button-write button" href="#">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__email">e-mail: <span class="contacts__email-adress">info@mimimishkashop.ru</span></p>
-        <p class="contacts__adress">адрес: <span class="contacts__adress-fact">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></p>
-        <img class="contacts__map" src="" alt="Наш адрес на карте">
-        <button class="contacts__button button" type="button" name="button">Напишите нам</button>
+        <p class="contacts__email">e-mail: <a class="contacts__email-address" href="mailto:info@mimimishkashop.ru" aria-label="написать нам на e-mail">info@mimimishkashop.ru</a></p>
+        <p class="contacts__address">адрес: <address class="contacts__address-fact">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</address></p>
+        <img class="contacts__map" src="https://via.placeholder.com/150x150" alt="Наш адрес на карте">
+        <a class="contacts__button button" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__social social">
         <h2 class="visually-hidden">Давайте дружить!</h2>
         <ul class="social__list">
-          <li class="social__item"><a class="social__link social__link--insta" href=""></a></li>
-          <li class="social__itrm"><a class="social__link social__link--facebook" href=""></a></li>
-          <li class="social__itrm"><a class="social__link social__link--twitter" href=""></a></li>
+          <li class="social__item"><a class="social__link" href="#" aria-label="Перейти в наш instagram"></a></li>
+          <li class="social__itrm"><a class="social__link" href="#" aria-label="Перейти в наш facebook"></a></li>
+          <li class="social__itrm"><a class="social__link" href="#" aria-label="Перейти в наш twitter"></a></li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <img class="copyright-link" src="" alt="Перейти на сайт htmlacademy"></img>
+        <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу htmlacademy">
+          <img class="copyright-img" src="https://via.placeholder.com/150x150" alt="Логотип htmlacademy">
+        </a>
       </div>
     </footer>
   </body>
