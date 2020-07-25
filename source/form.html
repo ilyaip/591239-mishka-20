@@ -41,7 +41,7 @@
             <legend class="order-form__title">Тип</legend>
             <ul class="order-form__list">
               <li class="order-form__item">
-                <input class="order-form__input order-form__input--radio" type="radio" name="type" value="accessory" id="access">
+                <input class="order-form__input order-form__input--radio" type="radio" name="type" value="accessory" id="access" checked>
                 <label class="order-form__label" for="access">Аксессуар для интерьера</label>
               </li>
               <li class="order-form__item">
@@ -88,21 +88,23 @@
               </li>
               <li class="order-form__item">
                 <label class="order-form__label" for="name-2">Фамилия:</label>
-                <input class="order-form__input-name" type="text" name="name" placeholder="Укажите фамилию*" id="name-2" required>
+                <input class="order-form__input-name" type="text" name="surname" placeholder="Укажите фамилию*" id="name-2" required>
               </li>
               <li class="order-form__item">
                 <label class="order-form__label" for="name-3">Отчество:</label>
-                <input class="order-form__input-name" type="text" name="name" placeholder="Отчество, если желаете" id="name-3">
+                <input class="order-form__input-name" type="text" name="middle-name" placeholder="Отчество, если желаете" id="name-3">
               </li>
             </ul>
           </fieldset>
           <fieldset class="order-form__group">
             <legend class="order-form__title">Тел</legend>
-            <input class="order-form__input-tel" type="tel" name="tel" placeholder="+7 XXX XXX XX XX*" required>
+            <label class="visually-hidden" for="phone-input">Введите свой номер телефона</label>
+            <input class="order-form__input-contacts order-form__input-contacts--phone" type="tel" name="tel" id="phone-input" placeholder="+7 XXX XXX XX XX*" required>
           </fieldset>
           <fieldset class="order-form__group">
             <legend class="order-form__title">E-mail</legend>
-            <input class="order-form__input-email" type="email" name="email" placeholder="Ваш Email*" required>
+            <label class="visually-hidden" for="mail-input">Введите свой E-mail</label>
+            <input class="order-form__input-contacts order-form__input-contacts--mail" type="email" name="email" id="mail-input" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset  class="order-form__group">
             <legend class="order-form__title">Доп</legend>
