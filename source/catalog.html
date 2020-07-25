@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html" aria-label="Перейти на главную страницу">
+        <img src="https://via.placeholder.com/150x150" alt="Shop mishka">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <div class="main-nav__item">
+          <form class="main-nav__form" action="http://echo.htmlacademy.ru/" method="post">
+            <input class="main-nav__input" type="search" name="site-search" placeholder="Поиск по сайту">
+          </form>
+        </div>
+        <div class="main-nav__item">
+          <a class="main-nav__link" href="">Корзина: пока пуста</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="catalog-products">
+        <h1 class="page__title">Каталог товаров</h1>
+        <ul class="catalog-product__list">
+          <li class="catalog-product__item">
+            <a href="#" aria-label="Перейти на страницу товара">
+              <img class="catalog-product__img" src="https://via.placeholder.com/150x150" alt="Синий вязаный зайчик">
+            </a>
+            <a class="catalog-product__link" href="#">
+              <h3 class="catalog-product__label">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="catalog-product__text">Рост 30 см, вес 200 г</p>
+            <div class="catalog-product__urn-wrapper">
+              <p class="catalog-product__cash">1 200 руб.</p>
+              <a class="catalog-product__urn" href="#" aria-label="Добавить товар в корзину"></a>
+            </div>
+          </li>
+          <li class="catalog-product__item">
+            <a href="#" aria-label="Перейти на страницу товара">
+              <img class="catalog-product__img" src="https://via.placeholder.com/150x150" alt="белая вязаная корзинка">
+            </a>
+            <a class="catalog-product__link" href="#">
+              <h3 class="catalog-product__label">Корзинка для белья</h3>
+            </a>
+            <p class="catalog-product__text">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-product__urn-wrapper">
+              <p class="catalog-product__cash">1 200 руб.</p>
+              <a class="catalog-product__urn" href="#" aria-label="Добавить товар в корзину"></a>
+            </div>
+          </li>
+          <li class="catalog-product__item">
+            <a href="#" aria-label="Перейти на страницу товара">
+              <img class="catalog-product__img" src="https://via.placeholder.com/150x150" alt="большая белая вязаная корзинка">
+            </a>
+            <a class="catalog-product__link" href="#">
+              <h3 class="catalog-product__label">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="catalog-product__text">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog-product__urn-wrapper">
+              <p class="catalog-product__cash">1 200 руб.</p>
+              <a class="catalog-product__urn" href="#" aria-label="Добавить товар в корзину"></a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="production">
+        <h2 class="production__title">Процесс производства</h2>
+        <video class="production__video" src="videofile.ogg" autoplay poster="posterimage.jpg">
+        </video>
+        <button class="production__video-play" type="button" name="play-video" aria-label="Воспроизвести видео"></button>
+        <p class="production__description">
+          По просьбам наших любимых фолловеров
+          мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="production__button button" href="#">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <h2 class="visually-hidden">Давайте дружить!</h2>
+        <ul class="social__list">
+          <li class="social__item"><a class="social__link social__link--insta" href=""></a></li>
+          <li class="social__itrm"><a class="social__link social__link--facebook" href=""></a></li>
+          <li class="social__itrm"><a class="social__link social__link--twitter" href=""></a></li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <img class="copyright-link" src="https://via.placeholder.com/150x150" alt="Перейти на сайт htmlacademy">
+      </div>
+    </footer>
+  </body>
+</html>
