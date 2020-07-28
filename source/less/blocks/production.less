@@ -1,0 +1,69 @@
+.production {
+  .container();
+  box-sizing: border-box;
+  min-height: 503px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+
+.production__wrapper {
+  position: relative;
+  border: 1px solid @product-week-border;
+  padding-bottom: 33px;
+  box-sizing: border-box;
+}
+
+.production__title {
+  position: relative;
+  display: block;
+  width: 156px;
+  text-align: left;
+  margin-left: 91px;
+  .text-17-24();
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../img/video.svg') no-repeat;
+    width: 32px;
+    height: 22px;
+    left: -57px;
+    top: 12px;
+  }
+}
+
+.production__video-play {
+  position: absolute;
+  background: url('../img/icon-play.svg') no-repeat;
+  width: 101px;
+  height: 77px;
+  border: none;
+  top: 114px;
+  left: 80px;
+  outline: none;
+  transition: all 500ms ease;
+  &:hover {
+    background: url('../img/play-2.svg') no-repeat;
+    width: 121px;
+    height: 92px;
+    top: 104px;
+    left: 70px;
+  }
+}
+
+.production__description {
+  text-align: left;
+  margin-left: 34px;
+  font-size: 13px;
+  line-height: 24px;
+  color: @light-black;
+}
+
+.production__button {
+  width: 192px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+  line-height: 16px;
+  padding-top: 17px;
+}

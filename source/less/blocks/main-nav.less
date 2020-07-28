@@ -1,0 +1,110 @@
+.main-nav {
+}
+
+.main-nav__toggle {
+  background: url('../img/menu-1.svg') no-repeat;
+  width: 21px;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+
+.main-nav__list {
+  .style-none();
+  .text-17-24();
+}
+
+.main-nav__input {
+  border: none;
+  outline: none;
+  min-width: 167px;
+  box-sizing: border-box;
+  &::placeholder {
+    color: @main-text-color;
+    .text-17-24();
+  }
+}
+
+.main-nav__item {
+  padding-left: 76px;
+  text-align: left;
+  min-height: 79px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  box-shadow: 0px 1px 0px @product-week-border, inset 0px 1px 0px @product-week-border;
+}
+
+.main-nav__form {
+  position: relative;
+  text-align: left;
+  &::before {
+    position: absolute;
+    content: '';
+    background: url('../img/search.svg') no-repeat;
+    width: 18px;
+    height: 18px;
+    left: -44px;
+    bottom: 7px;
+  }
+  &:hover,
+  &:focus {
+    color: @black-opacity-6;
+    &::before {
+      background: url('../img/search-2.svg') no-repeat;
+    }
+  }
+  &:active {
+    color: @black-opacity-3;
+    &::before {
+      background: url('../img/search-3.svg') no-repeat;
+    }
+  }
+}
+
+.main-nav__link {
+  .text-17-24();
+  color: @main-text-color;
+  &::before {
+    position: absolute;
+    content: '';
+    background: url('../img/cart.svg') no-repeat;
+    width: 21px;
+    height: 18px;
+    left: 40px;
+    bottom: 26px;
+  }
+  &:hover,
+  &:focus {
+    color: @black-opacity-6;
+    &::before {
+      background: url('../img/cart-2.svg') no-repeat;
+    }
+  }
+  &:active {
+    color: @black-opacity-3;
+    &::before {
+      background: url('../img/cart-3.svg') no-repeat;
+    }
+  }
+}
+
+.site-list__item {
+  width: 320px;
+  min-height: 79px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  padding-left: 76px;
+  text-align: left;
+  box-shadow: 0px 1px 0px @product-week-border, inset 0px 1px 0px @product-week-border;
+}
+
+.site-list__link {
+  color: @main-text-color;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,210 @@
+.order-form {
+  margin-bottom: 30px;
+}
+
+.order-form__text {
+  .container();
+  font-size: 13px;
+  line-height: 24px;
+  color: @light-black;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+.order-form__form {
+  .container();
+  padding-left: 39px;
+  padding-right: 27px;
+}
+
+.order-form__group {
+  padding: 0;
+  border: none;
+  border-top: 1px solid @light-green-2;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.order-form__title {
+  text-align: left;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @light-green;
+  padding-right: 18px;
+  text-transform: uppercase;
+}
+
+.order-form__list {
+  .style-none();
+}
+
+.order-form__item {
+  text-align: left;
+}
+
+.order-form__label {
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  padding-left: 63px;
+  padding-bottom: 45px;
+  width: 220px;
+}
+
+.order-form__input {
+  position: absolute;
+}
+
+.order-form__input--radio {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../img/radio-off.svg') no-repeat;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    bottom: 30px;
+  }
+}
+
+.order-form__input--checkbox {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('../img/check-off.svg') no-repeat;
+    width: 42px;
+    height: 42px;
+    left: 0px;
+    bottom: 30px;
+  }
+}
+
+.order-form__input:hover + .order-form__input--radio::before {
+  background: url('../img/21.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:checked:hover + .order-form__input--radio::before {
+  background: url('../img/22.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:checked + .order-form__input--radio::before {
+  background: url('../img/2.svg') no-repeat;
+}
+
+.order-form__input:active + .order-form__input--radio::before {
+  background: url('../img/23.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:checked:active + .order-form__input--radio::before {
+  background: url('../img/24.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:checked + .order-form__input--checkbox::before {
+  background: url('../img/3.svg') no-repeat;
+}
+
+.order-form__input:checked:hover + .order-form__input--checkbox::before {
+  background: url('../img/32.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:hover + .order-form__input--checkbox::before {
+  background: url('../img/31.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:active + .order-form__input--checkbox::before {
+  background: url('../img/33.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__input:checked:active + .order-form__input--checkbox::before {
+  background: url('../img/35.svg') no-repeat;
+  background-size: 100%;
+}
+
+.order-form__label-name {
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  width: 220px;
+}
+
+.order-form__input-name {
+  border: none;
+  box-shadow: inset 0px -2px 0px @main-text-color;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 260px;
+  margin-bottom: 20px;
+  outline: none;
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    opacity: 0.3;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: inset 0px -2px 0px @light-green-2;
+  }
+}
+
+.order-form__input-contacts {
+  border: none;
+  box-shadow: inset 0px -2px 0px @main-text-color;
+  padding-bottom: 17px;
+  width: 260px;
+  margin-bottom: 20px;
+  outline: none;
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    opacity: 0.3;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: inset 0px -2px 0px @light-green-2;
+  }
+}
+
+.order-form__comment {
+  width: 260px;
+  height: 142px;
+  border: 2px solid @light-black;
+  box-sizing: border-box;
+  padding-left: 17px;
+  padding-top: 17px;
+  font-size: 17px;
+  line-height: 18px;
+  outline: none;
+  &::placeholder {
+    opacity: 0.3;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid @light-green-2;;
+  }
+}
+
+.order-form__required {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.order-form__button {
+  padding-top: 4px;
+  background-color: transparent;
+}
