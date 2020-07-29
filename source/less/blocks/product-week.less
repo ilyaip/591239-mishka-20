@@ -4,10 +4,11 @@
   padding-left: 40px;
   padding-right: 40px;
   margin-bottom: 36px;
+
   &::after {
     position: absolute;
-    content: '';
-    background: url('../img/zig-zag.svg') no-repeat;
+    content: "";
+    background: url("../img/zig-zag.svg") no-repeat;
     width: 320px;
     height: 6px;
     bottom: -36px;
@@ -90,11 +91,13 @@
   padding-top: 14px;
   box-sizing: border-box;
   transition: all 300ms ease;
+
   &:hover,
   &:focus {
     background-color: @light-black;
     color: @main-background-color;
   }
+
   &:active {
     color: @white-opacity;
   }

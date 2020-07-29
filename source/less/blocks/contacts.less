@@ -23,11 +23,13 @@
   padding-bottom: 3px;
   margin-left: 20px;
   transition: all 200ms ease;
+
   &:hover,
   &focus {
     color: @light-green-3;
     border-bottom: 1px solid @light-green-3;
   }
+
   &:active {
     border-bottom: 1px solid @light-green-3-opacity;
   }
@@ -53,11 +55,12 @@
 .contacts__map-wrapper {
   position: relative;
   display: block;
+
   &::before {
     display: inline-block;
     position: absolute;
-    content: '';
-    background: url('../img/map-pin.svg') no-repeat;
+    content: "";
+    background: url("../img/map-pin.svg") no-repeat;
     width: 67px;
     height: 100px;
     bottom: 222px;

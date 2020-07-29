@@ -7,7 +7,7 @@
 .catalog__title-wrapper {
   width: 320px;
   height: 337px;
-  background: url('../img/hero-mobile@1x.jpg') no-repeat;
+  background: url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center;
   padding-top: 90px;
 }
@@ -39,6 +39,7 @@
   padding-top: 24px;
   padding-left: 30px;
   transition: all 300ms ease;
+
   &:hover,
   &:focus {
     min-height: 108px;
@@ -50,21 +51,24 @@
 .catalog__item:last-of-type {
   position: relative;
   background-color: @dark-green;
+
   &::after {
     position: absolute;
     content: "";
     width: 60px;
     height: 60px;
-    background: url('../img/toy-main.svg') no-repeat;
+    background: url("../img/toy-main.svg") no-repeat;
     top: 21px;
     right: 27px;
     transition: all 300ms ease;
   }
+
   &:hover::after,
   &:focus::after {
     top: 16px;
-    background: url('../img/toy-main-2.svg') no-repeat;
+    background: url("../img/toy-main-2.svg") no-repeat;
   }
+
   &:active::after {
     opacity: 0.6;
   }
@@ -72,21 +76,24 @@
 
 .catalog__item:first-of-type {
   position: relative;
+
   &::after {
     position: absolute;
     content: "";
     width: 40px;
     height: 62px;
-    background: url('../img/interior.svg') no-repeat;
+    background: url("../img/interior.svg") no-repeat;
     top: 23px;
     right: 36px;
     transition: all 300ms ease;
   }
+
   &:hover::after,
   &:focus::after {
     top: 18px;
-    background: url('../img/interior-2.svg') no-repeat;
+    background: url("../img/interior-2.svg") no-repeat;
   }
+
   &:active::after {
     opacity: 0.6;
   }
