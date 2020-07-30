@@ -7,9 +7,14 @@
 .catalog__title-wrapper {
   width: 320px;
   height: 337px;
-  background: url("../img/hero-mobile@1x.jpg") no-repeat;
+  background: @photo-bg url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center;
-  padding-top: 90px;
+  background-position: auto;
+  background-size: auto;
+  padding-top: 80px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  box-sizing: border-box;
 }
 
 .catalog__title {
@@ -100,6 +105,7 @@
 }
 
 .catalog__description {
+  position: relative;
   display: block;
   color: @main-background-color;
   font-size: 19px;
@@ -109,4 +115,14 @@
   margin-left: 0;
   margin-right: 0;
   text-align: left;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 103px;
+    left: -30px;
+    top: -24px;
+    z-index: 10;
+  }
 }
