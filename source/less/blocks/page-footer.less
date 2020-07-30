@@ -1,0 +1,34 @@
+.page-footer {
+  background-color: @catalog-bg;
+  padding-top: 25px;
+  padding-bottom: 1px;
+}
+
+.page-footer__wrapper {
+  .container();
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.social {
+  margin-bottom: 50px;
+}
+
+.social__list {
+  .style-none();
+  display: flex;
+  margin-left: 57px;
+  margin-right: 62px;
+  justify-content: space-between;
+}
+
+.social__link {
+  &:hover path,
+  &:focus path {
+    fill: @light-green-3;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}
