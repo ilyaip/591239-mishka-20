@@ -10,6 +10,10 @@
   justify-content: flex-end;
   align-items: center;
   min-height: 79px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+  }
 }
 
 .page-header__button {
@@ -26,5 +30,18 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 113px;
+    height: 46px;
+    left: 0;
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 450px;
+    top: 30px;
   }
 }

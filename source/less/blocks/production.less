@@ -5,6 +5,11 @@
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .production__wrapper {
@@ -12,6 +17,16 @@
   border: 1px solid @product-week-border;
   padding-bottom: 33px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 .production__title {
@@ -30,6 +45,38 @@
     height: 22px;
     left: -57px;
     top: 12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 271px;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 178px;
+  }
+}
+
+.production__video {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
   }
 }
 
@@ -59,6 +106,22 @@
   font-size: 13px;
   line-height: 24px;
   color: @light-black;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 611px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 252px;
+  }
 }
 
 .production__button {
@@ -68,4 +131,20 @@
   font-size: 17px;
   line-height: 16px;
   padding-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 584px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 230px;
+  }
 }
