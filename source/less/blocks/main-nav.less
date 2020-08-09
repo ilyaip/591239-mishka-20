@@ -36,6 +36,7 @@
     grid-row-end: 3;
     display: flex;
     padding: 0;
+    margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,8 +44,7 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    padding-top: 30px;
-    padding-left: 50px;
+    padding-top: 0;
   }
 }
 
@@ -73,6 +73,16 @@
     grid-row-start: 2;
     grid-row-end: 3;
     display: block;
+    font-size: 15px;
+    line-height: 24px;
+    margin-right: auto;
+    margin-left: 27px;
+    margin-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 280px;
   }
 }
 
@@ -89,6 +99,13 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    text-align: right;
+    margin-right: 77px;
   }
 }
 
@@ -107,7 +124,11 @@
 
     @media (min-width: @tablet-width) {
       top: 5px;
-      left: -110px;
+      left: -133px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 195px;
     }
   }
 
@@ -133,6 +154,12 @@
   .text-17-24();
   color: @main-text-color;
 
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 24px;
+    margin-right: 25px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -143,12 +170,12 @@
     bottom: 26px;
 
     @media (min-width: @tablet-width) {
-      left: 440px;
+      left: 485px;
       top: 35px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 700px;
+      left: 865px;
     }
   }
 
@@ -182,6 +209,17 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     width: 167px;
+    font-size: 15px;
+    line-height: 24px;
+    box-shadow: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    width: 179px;
+    font-size: 17px;
+    margin-right: 40px;
+    padding-top: 3px;
   }
 }
 
@@ -200,22 +238,36 @@
 
 .main-nav__new {
   display: none;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
 
   @media (min-width: @desktop-width) {
     display: block;
     margin-left: 50px;
     margin-right: 50px;
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
 
 .main-nav__sale {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
   display: none;
 
   @media (min-width: @desktop-width) {
     display: block;
+    margin-left: 14px;
+    margin-top: 30px;
   }
 }
 
 .main-nav__sale-wrapper {
   display: flex;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -30px;
+  }
 }

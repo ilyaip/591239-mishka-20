@@ -1,14 +1,14 @@
 .page-footer {
   background-color: @catalog-bg;
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 1px;
 }
 
 .page-footer__wrapper {
   position: relative;
   .container();
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
 
   &::before {
     @media (min-width: @tablet-width) {
@@ -17,8 +17,8 @@
       background: url("../img/logo-footer.svg");
       width: 102px;
       height: 34px;
-      left: 60px;
-      top: 0;
+      left: 50px;
+      top: 27px;
     }
   }
 
@@ -28,11 +28,16 @@
     align-items: flex-end;
     padding-left: 50px;
     padding-right: 50px;
+    min-height: 143px;
   }
 }
 
 .social {
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .social__list {
@@ -43,6 +48,11 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 265px;
     width: 130px;
   }
 }
