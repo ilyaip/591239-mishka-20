@@ -12,6 +12,7 @@
 
 .main-nav {
   @media (min-width: @tablet-width) {
+    box-sizing: border-box;
     display: grid;
     width: 768px;
     margin-left: auto;
@@ -76,13 +77,13 @@
     font-size: 15px;
     line-height: 24px;
     margin-right: auto;
-    margin-left: 27px;
+    margin-left: 102px;
     margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    margin-left: 280px;
+    margin-left: 378px;
   }
 }
 
@@ -105,7 +106,7 @@
   @media (min-width: @desktop-width) {
     padding-left: 0;
     text-align: right;
-    margin-right: 77px;
+    margin-right: 0px;
   }
 }
 
@@ -124,11 +125,11 @@
 
     @media (min-width: @tablet-width) {
       top: 5px;
-      left: -133px;
+      left: -57px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 195px;
+      left: 293px;
     }
   }
 
@@ -157,7 +158,11 @@
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 24px;
-    margin-right: 25px;
+    margin-left: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 373px;
   }
 
   &::before {
