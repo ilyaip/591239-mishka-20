@@ -1,8 +1,10 @@
 .catalog-products {
   margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .page__title {
+  position: relative;
   display: block;
   font-size: 27px;
   line-height: 30px;
@@ -11,29 +13,94 @@
   background-color: @catalog-bg;
   padding-top: 74px;
   margin-bottom: 30px;
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      height: 24px;
+      background: url("../img/zigzag-white.svg") repeat;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: url("../img/zigzag-white-desktop.svg") repeat;
+      height: 34px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 238px;
+    padding-top: 102px;
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: -150px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 272px;
+    padding-top: 102px;
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: -93px;
+  }
 }
 
 .catalog-product__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   .style-none();
   .container();
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 110px;
+  }
 }
 
 .catalog-product__item {
   padding-left: 30px;
   padding-right: 30px;
   box-sizing: border-box;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
-  &:hover .catalog-product_text-wrapper {
+  &:hover .catalog-product__text-wrapper {
     box-shadow: 0 6px 10px @black-opacity-1;
     transition: all 300ms ease;
   }
 
-  &:active .catalog-product_text-wrapper {
+  &:active .catalog-product__text-wrapper {
     box-shadow: 0 3px 5px @black-opacity-1;
   }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    min-height: 335px;
+    width: 316px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.catalog-product__item:last-of-type .catalog-product__label {
+  margin-top: 25px;
 }
 
 .catalog-product__link {
@@ -45,10 +112,32 @@
   padding-right: 20px;
 }
 
+.catalog-product__label {
+  .text-17-24();
+  margin-top: 30px;
+  margin-bottom: 0;
+  width: 200px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin-top: 25px;
+  }
+}
+
 .catalog-product__text {
   color: @light-black;
   text-align: left;
   padding-left: 28px;
+  margin-top: 5px;
+  font-size: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: auto;
+  }
 }
 
 .catalog-product__urn-wrapper {
@@ -58,7 +147,7 @@
   padding-left: 28px;
   padding-right: 27px;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 25px;
   padding-bottom: 7px;
 
   &::before {
@@ -70,6 +159,14 @@
     bottom: 73px;
     left: 28px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .catalog-product__cash {
@@ -77,6 +174,10 @@
   line-height: 24px;
   font-weight: 700;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .catalog-product__urn {
@@ -93,8 +194,37 @@
   }
 }
 
-.catalog-product_text-wrapper {
+.catalog-product__text-wrapper {
   box-sizing: border-box;
   border: 1px solid @product-week-border;
   margin-top: -10px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 335px;
+    height: 334px;
+    margin-top: 0;
+    padding-left: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 316px;
+    margin-top: -10px;
+    height: 197px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.catalog-product__img {
+  @media (min-width: @tablet-width) {
+    min-width: 335px;
+    min-height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 316px;
+    min-height: 462px;
+  }
 }

@@ -2,6 +2,16 @@
   width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+  }
 }
 
 .style-none() {
@@ -14,16 +24,36 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .text-25-30() {
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .text-17-20() {
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

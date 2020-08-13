@@ -1,19 +1,61 @@
 .catalog {
   position: relative;
-  .container();
   min-height: 489px;
+  background-color: @photo-bg;
+  width: 100%;
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background: url("../img/zigzag-white.svg") repeat;
+      bottom: -10px;
+      left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      width: 400%;
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat;
+      bottom: -17px;
+      left: -900px;
+    }
+  }
 }
 
 .catalog__title-wrapper {
+  .container();
+  position: relative;
   width: 320px;
   height: 337px;
   background: @photo-bg url("../img/hero-mobile@1x.jpg") no-repeat;
   background-position: center;
-  background-size: auto;
-  padding-top: 80px;
+  background-size: cover;
+  padding-top: 22%;
   margin-top: 30px;
   margin-bottom: 45px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    background: @photo-bg url("../img/hero-tablet@1x.jpg") no-repeat;
+    background-position: center;
+    height: 746px;
+    padding-top: 164px;
+    margin-top: -110px;
+    box-shadow: 0 0 0 @product-week-border, inset 0 1px 0 @product-week-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    background: @photo-bg url("../img/hero-desktop@1x.jpg") no-repeat;
+    margin-top: -45px;
+    padding-top: 160px;
+  }
 }
 
 .catalog__title {
@@ -25,30 +67,58 @@
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    width: 700px;
+  }
 }
 
 .catalog-list {
+  position: relative;
   display: flex;
   flex-direction: column;
   .style-none();
   width: 320px;
   margin-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: 668px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -123px;
+  }
 }
 
 .catalog__item {
+  position: relative;
   width: 100%;
-  min-height: 103px;
+  min-height: 124px;
   box-sizing: border-box;
   background-color: @light-green;
-  padding-top: 24px;
-  padding-left: 30px;
   transition: all 300ms ease;
+  top: 5px;
 
   &:hover,
   &:focus {
-    min-height: 108px;
-    padding-top: 19px;
-    margin-top: -5px;
+    top: 0;
   }
 }
 
@@ -65,12 +135,21 @@
     top: 21px;
     right: 27px;
     transition: all 300ms ease;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      right: 33px;
+    }
   }
 
   &:hover::after,
   &:focus::after {
     top: 16px;
     background: url("../img/toy-main-2.svg") no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 25px;
+    }
   }
 
   &:active::after {
@@ -90,12 +169,20 @@
     top: 23px;
     right: 36px;
     transition: all 300ms ease;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+    }
   }
 
   &:hover::after,
   &:focus::after {
     top: 18px;
     background: url("../img/interior-2.svg") no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 25px;
+    }
   }
 
   &:active::after {
@@ -104,24 +191,23 @@
 }
 
 .catalog__description {
+  box-sizing: border-box;
   position: relative;
   display: block;
   color: @main-background-color;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
-  width: 130px;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
   margin-right: 0;
   text-align: left;
+  padding-top: 25px;
+  padding-left: 37px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 320px;
-    height: 103px;
-    left: -30px;
-    top: -24px;
-    z-index: 10;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
