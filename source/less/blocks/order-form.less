@@ -128,6 +128,8 @@
 
 .order-form__list {
   .style-none();
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .order-form__item {
@@ -405,7 +407,7 @@
     border: 2px solid @light-green-2;
   }
 
-  @media (min-width: @tablet-width)  {
+  @media (min-width: @tablet-width) {
     width: 501px;
     font-size: 19px;
   }
@@ -456,11 +458,6 @@
   flex-wrap: wrap;
 }
 
-.order-form__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .order-form__item--flex {
   @media (min-width: @tablet-width) {
     display: flex;
@@ -484,7 +481,7 @@
   margin-top: -30px;
   padding-left: 3px;
 
-  @media (min-width: @desktop-width)  {
+  @media (min-width: @desktop-width) {
     margin-top: 20px;
     margin-left: 0;
   }
