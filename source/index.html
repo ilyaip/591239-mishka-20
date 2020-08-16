@@ -27,12 +27,12 @@
           Бесплатная доставка по России
         </div>
         <div class="main-nav__sale-wrapper">
-          <div class="main-nav__new">
+          <a href="" class="main-nav__new">
             Новые поступления
-          </div>
-          <div class="main-nav__sale">
+          </a>
+          <a href="" class="main-nav__sale">
             Распродажа
-          </div>
+          </a>
         </div>
         <div class="main-nav__item">
           <form class="main-nav__form" action="http://echo.htmlacademy.ru/" method="post">
@@ -152,6 +152,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу">
+          <img src="img/logo-footer.svg" width="102" height="34" alt="Shop mishka">
+        </a>
         <div class="page-footer__social social">
           <h2 class="visually-hidden">Давайте дружить!</h2>
           <ul class="social__list">
@@ -200,5 +203,25 @@
         </div>
       </div>
     </footer>
+    <section class="modal-size">
+      <p class="modal-size__title">
+        Добавить в корзину
+      </p>
+      <p class="modal-size__text">
+        Выберите размер:
+      </p>
+      <ul class="modal-size__buttons-list">
+        <li>
+          <button class="modal-size__button" type="button">S</button>
+        </li>
+        <li>
+          <button class="modal-size__button" type="button">M</button>
+        </li>
+        <li>
+          <button class="modal-size__button" type="button">L</button>
+        </li>
+      </ul>
+      <button class="modal-size__button-sub" type="submit">Добавить</button>
+    </section>
   </body>
 </html>
