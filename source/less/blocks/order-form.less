@@ -254,7 +254,7 @@
 
 .order-form__input:hover + .order-form__input--radio::before,
 .order-form__input:focus + .order-form__input--radio::before {
-  background: url("../img/21.svg") no-repeat;
+  background: url("../img/21-2.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -270,8 +270,8 @@
 }
 
 .order-form__input:active + .order-form__input--radio::before {
-  background: url("../img/23.svg") no-repeat;
-  background-size: 100%;
+  background: url("../img/23-3.svg") no-repeat;
+  background-size: contain;
 }
 
 .order-form__input:checked:active + .order-form__input--radio::before {
@@ -281,7 +281,7 @@
 
 .order-form__input:hover + .order-form__input--radio-2::before,
 .order-form__input:focus + .order-form__input--radio-2::before {
-  background: url("../img/21.svg") no-repeat;
+  background: url("../img/21-2.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -297,8 +297,9 @@
 }
 
 .order-form__input:active + .order-form__input--radio-2::before {
-  background: url("../img/23.svg") no-repeat;
-  background-size: 100%;
+  background: url("../img/23-3.svg") no-repeat;
+  background-size: contain;
+
 }
 
 .order-form__input:checked:active + .order-form__input--radio-2::before {
@@ -492,7 +493,58 @@
   }
 }
 
+.order-form__input-contacts--iphone path {
+  opacity: 0.2;
+}
+
+.order-form__input-contacts:hover + .order-form__input-contacts--iphone path {
+  fill: @light-green-2;
+  opacity: 1;
+}
+
+.order-form__input-contacts:hover + .order-form__input-contacts--email path {
+  fill: @light-green-2;
+  opacity: 3;
+}
+
+.order-form__input-contacts--email {
+  position: absolute;
+  right: 3px;
+  top: 36px;
+
+  &:hover {
+    fill: @light-green-2;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 5px;
+    right: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 200px;
+    top: 10px;
+  }
+}
+
+.order-form__input-contacts--iphone {
+  position: absolute;
+  right: 3px;
+  top: 30px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 200px;
+    top: 5px;
+  }
+}
+
 .order-form__group-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
