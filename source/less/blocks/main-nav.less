@@ -104,7 +104,7 @@
   text-align: left;
   min-height: 79px;
   box-sizing: border-box;
-  padding-top: 30px;
+  padding-top: 27px;
   box-shadow: 0 1px 0 @product-week-border, inset 0 1px 0 @product-week-border;
 
   @media (min-width: @tablet-width) {
@@ -147,6 +147,8 @@
 
 .main-nav__form-label {
   .text-17-24();
+  color: @main-text-color;
+  display: inline-block;
 
   &:hover {
     opacity: 0.6;
@@ -162,12 +164,19 @@
 }
 
 .main-nav__form-search {
-  position: absolute;
-  left: -35px;
-  top: 5px;
+  position: relative;
+  right: 183px;
+  top: 3px;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    right: 30px;
+    top: 0;
+  }
 
   @media (min-width: @desktop-width) {
-    left: 320px;
+    right: 270px;
+    top: 2px;
   }
 }
 
@@ -232,6 +241,15 @@
   .text-17-24();
   color: @main-text-color;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 24px;
@@ -245,8 +263,8 @@
 
 .main-nav__item--cart {
   position: absolute;
-  left: 40px;
-  top: 35px;
+  left: 30px;
+  top: 30px;
 
   @media (min-width: @tablet-width) {
     left: 90px;

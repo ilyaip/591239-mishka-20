@@ -6,6 +6,8 @@ var nav = document.querySelector(".main-nav");
 //   nav.classList.add("main-nav--closed");
 // }
 
+nav.classList.add("main-nav--closed");
+
 menuToggle.onclick = function() {
   nav.classList.toggle("main-nav--closed");
   menuToggle.classList.toggle("main-nav__toggle-1");

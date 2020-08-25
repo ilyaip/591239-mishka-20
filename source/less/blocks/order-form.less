@@ -125,6 +125,13 @@
   }
 }
 
+.order-form__title--email {
+  &::after {
+    left: 80px;
+    width: 180px;
+  }
+}
+
 .order-form__list {
   .style-none();
   display: flex;
@@ -194,6 +201,7 @@
     @media (min-width: @tablet-width) {
       left: -80px;
       bottom: -16px;
+      background: url("../img/radio-desktop-off.svg") no-repeat;
       width: 55px;
       height: 55px;
     }
@@ -265,7 +273,7 @@
 }
 
 .order-form__input:checked + .order-form__input--radio::before {
-  background: url("../img/2.svg") no-repeat;
+  background: url("../img/radio-desktopOn.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -496,12 +504,14 @@
   opacity: 0.2;
 }
 
-.order-form__input-contacts:hover + .order-form__input-contacts--iphone path {
+.order-form__input-contacts:hover + .order-form__input-contacts--iphone path,
+.order-form__input-contacts:focus + .order-form__input-contacts--iphone path {
   fill: @light-green-2;
   opacity: 1;
 }
 
-.order-form__input-contacts:hover + .order-form__input-contacts--email path {
+.order-form__input-contacts:hover + .order-form__input-contacts--email path,
+.order-form__input-contacts:focus + .order-form__input-contacts--email path {
   fill: @light-green-2;
   opacity: 3;
 }
