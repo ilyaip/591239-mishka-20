@@ -25,6 +25,15 @@
   padding-bottom: 33px;
   box-sizing: border-box;
 
+  &:hover {
+    box-shadow: 0 6px 10px @black-opacity-1;
+    transition: all 300ms ease;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px @black-opacity-1;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,6 +42,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 0;
   }
 }
 
@@ -106,6 +116,7 @@
     grid-row-end: 4;
     width: 682px;
     height: 455px;
+    margin-bottom: 0;
   }
 }
 
@@ -133,11 +144,17 @@
   transition: all 200ms ease;
   transform: translate(-50%, -50%);
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: url("../img/play-2.svg") no-repeat;
     width: 121px;
     height: 92px;
     transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.3;
   }
 }
 

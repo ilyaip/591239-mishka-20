@@ -10,18 +10,6 @@
   padding-left: 30px;
   padding-right: 30px;
 
-  &::before {
-    @media (min-width: @tablet-width) {
-      content: "";
-      position: absolute;
-      background: url("../img/logo-footer.svg");
-      width: 102px;
-      height: 34px;
-      left: 50px;
-      top: 27px;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
@@ -29,6 +17,17 @@
     padding-left: 50px;
     padding-right: 50px;
     min-height: 143px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-right: auto;
+    align-self: center;
+    margin-bottom: 40px;
   }
 }
 

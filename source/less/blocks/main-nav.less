@@ -1,13 +1,22 @@
 .main-nav__toggle {
-  background: url("../img/menu-1.svg") no-repeat;
+  background: url("../img/close.svg") no-repeat;
   width: 21px;
   height: 20px;
   border: none;
   outline: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-nav__toggle-1 {
+  background: url("../img/menu-1.svg") no-repeat;
+}
+
+.main-nav--closed {
+  display: none;
 }
 
 .main-nav {
@@ -61,7 +70,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: -20;
   }
 }
 
@@ -88,11 +99,12 @@
 }
 
 .main-nav__item {
+  position: relative;
   padding-left: 76px;
   text-align: left;
   min-height: 79px;
   box-sizing: border-box;
-  padding-top: 30px;
+  padding-top: 27px;
   box-shadow: 0 1px 0 @product-week-border, inset 0 1px 0 @product-week-border;
 
   @media (min-width: @tablet-width) {
@@ -110,12 +122,86 @@
   }
 }
 
+.main-nav__form-form {
+  position: relative;
+}
+
+.main-nav__form-label:hover + .main-nav__form-search,
+.main-nav__form-label:focus + .main-nav__form-search {
+  path {
+    fill: @light-green-2;
+    opacity: 1;
+  }
+}
+
+.main-nav__form-label:active + .main-nav__form-search {
+  path {
+    fill: @light-green-2;
+    opacity: 0.3;
+  }
+}
+
+.main-nav__form-search--none {
+  display: none;
+}
+
+.main-nav__form-label {
+  .text-17-24();
+  color: @main-text-color;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__form-search {
+  position: relative;
+  right: 183px;
+  top: 3px;
+  z-index: 100;
+
+  @media (min-width: @tablet-width) {
+    right: 30px;
+    top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 270px;
+    top: 2px;
+  }
+}
+
+.main-nav__form-search:hover,
+.main-nav__form-search:focus {
+  path {
+    fill: @light-green-2;
+    opacity: 1;
+  }
+}
+
+.main-nav__form-search:active {
+  path {
+    fill: @light-green-2;
+    opacity: 0.3;
+  }
+}
+
 .main-nav__form {
   position: relative;
   text-align: left;
 
   &::before {
     position: absolute;
+    display: block;
     content: "";
     background: url("../img/search.svg") no-repeat;
     width: 18px;
@@ -155,6 +241,15 @@
   .text-17-24();
   color: @main-text-color;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 24px;
@@ -164,41 +259,47 @@
   @media (min-width: @desktop-width) {
     margin-left: 373px;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    background: url("../img/cart.svg") no-repeat;
-    width: 21px;
-    height: 18px;
-    left: 40px;
-    bottom: 26px;
+.main-nav__item--cart {
+  position: absolute;
+  left: 30px;
+  top: 30px;
 
-    @media (min-width: @tablet-width) {
-      left: 485px;
-      top: 35px;
-    }
+  @media (min-width: @tablet-width) {
+    left: 90px;
+  }
 
-    @media (min-width: @desktop-width) {
-      left: 865px;
-    }
+  @media (min-width: @desktop-width) {
+    left: 370px;
   }
 
   &:hover,
   &:focus {
-    color: @black-opacity-6;
-
-    &::before {
-      background: url("../img/cart-2.svg") no-repeat;
+    path {
+      opacity: 1;
+      fill: @light-green-2;
     }
   }
 
   &:active {
-    color: @black-opacity-3;
-
-    &::before {
-      background: url("../img/cart-3.svg") no-repeat;
+    path {
+      opacity: 0.3;
     }
+  }
+}
+
+.main-nav__link:hover + .main-nav__item--cart,
+.main-nav__link:focus + .main-nav__item--cart {
+  path {
+    fill: @light-green-2;
+    opacity: 1;
+  }
+}
+
+.main-nav__link:active + .main-nav__item--cart {
+  path {
+    opacity: 0.3;
   }
 }
 
@@ -246,12 +347,22 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+  color: @main-text-color;
 
   @media (min-width: @desktop-width) {
     display: block;
     margin-right: 50px;
     margin-left: 0;
     margin-top: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -260,11 +371,21 @@
   font-size: 15px;
   line-height: 24px;
   display: none;
+  color: @main-text-color;
 
   @media (min-width: @desktop-width) {
     display: block;
     margin-left: 14px;
     margin-top: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

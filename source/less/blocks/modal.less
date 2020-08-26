@@ -1,0 +1,101 @@
+.modal-size {
+  .container;
+  display: block;
+  min-height: 336px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 5px 10px @modal-shadow;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid @modal-border;
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+}
+
+.modal-size__title {
+  .text-25-30();
+  width: 156px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 14px;
+  margin-top: 28.5px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 381px;
+    font-size: 30px;
+    line-height: 57px;
+    margin-left: -15px;
+    margin-bottom: 11px;
+  }
+}
+
+.modal-size__text {
+  font-size: 17px;
+  line-height: 30px;
+  margin-bottom: 21.5px;
+  margin-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+    margin-bottom: 19.5px;
+  }
+}
+
+.modal-size__buttons-list {
+  .style-none();
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.modal-size__button {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  border: 2px solid @modal-button-border;
+  width: 82px;
+  height: 52px;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+
+  &:hover {
+    border-color: @modal-button-border-hover;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @light-green-2;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+}
+
+.modal-size__button-sub {
+  font-family: "Open Sans", "Arial", sans-serif;
+  width: 260px;
+  height: 52px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @main-background-color;
+  background-color: @light-green;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @light-green-3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+}
