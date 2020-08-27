@@ -10,7 +10,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Shop mishka">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Shop mishka">
+          </picture>
         </a>
         <button class="page-header__button main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
@@ -95,7 +99,11 @@
             </dd>
           </div>
         </dl>
-        <img class="product-week__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Набор из трёх корзинок">
+        <picture class="product-week__img">
+          <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+          <img class="product-week__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Набор из трёх корзинок">
+        </picture>
         <p class="product-week__price">Цена: 990 руб.</p>
         <a class="product-week__button-order button" href="#">Заказать</a>
       </section>
@@ -152,7 +160,11 @@
           <address class="contacts__address-fact">г. Санкт-Петербург, ул. Большая Конюшенная, <br> д. 19/8, офис 101</address>
         </div>
         <div class="contacts__map-wrapper">
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Наш адрес на карте">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg" width="322" height="457" alt="Наш адрес на карте">
+          </picture>
         </div>
         <a class="contacts__button button" href="#">Напишите нам</a>
       </section>
