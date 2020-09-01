@@ -23,6 +23,15 @@
 .page-footer__logo {
   display: none;
 
+  :hover,
+  :focus {
+    fill: @light-green-3;
+  }
+
+  :active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: block;
     margin-right: auto;
@@ -57,12 +66,12 @@
 }
 
 .social__link {
-  &:hover path,
-  &:focus path {
+  &:hover,
+  &:focus {
     fill: @light-green-3;
   }
 
-  &:active path {
+  &:active {
     opacity: 0.3;
   }
 }

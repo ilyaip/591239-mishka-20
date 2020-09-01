@@ -128,17 +128,28 @@
 
 .main-nav__form-label:hover + .main-nav__form-search,
 .main-nav__form-label:focus + .main-nav__form-search {
-  path {
     fill: @light-green-2;
     opacity: 1;
+}
+
+.main-nav__form-search {
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: @light-green-2;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @light-green-2;
+    opacity: 0.3;
   }
 }
 
 .main-nav__form-label:active + .main-nav__form-search {
-  path {
-    fill: @light-green-2;
-    opacity: 0.3;
-  }
+  fill: @light-green-2;
+  opacity: 0.3;
 }
 
 .main-nav__form-search--none {
@@ -177,21 +188,6 @@
   @media (min-width: @desktop-width) {
     right: 270px;
     top: 2px;
-  }
-}
-
-.main-nav__form-search:hover,
-.main-nav__form-search:focus {
-  path {
-    fill: @light-green-2;
-    opacity: 1;
-  }
-}
-
-.main-nav__form-search:active {
-  path {
-    fill: @light-green-2;
-    opacity: 0.3;
   }
 }
 
@@ -265,6 +261,7 @@
   position: absolute;
   left: 30px;
   top: 30px;
+  opacity: 0.2;
 
   @media (min-width: @tablet-width) {
     left: 90px;
@@ -276,31 +273,23 @@
 
   &:hover,
   &:focus {
-    path {
-      opacity: 1;
-      fill: @light-green-2;
-    }
+    opacity: 1;
+    fill: @light-green-2;
   }
 
   &:active {
-    path {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 }
 
 .main-nav__link:hover + .main-nav__item--cart,
 .main-nav__link:focus + .main-nav__item--cart {
-  path {
     fill: @light-green-2;
     opacity: 1;
-  }
 }
 
 .main-nav__link:active + .main-nav__item--cart {
-  path {
     opacity: 0.3;
-  }
 }
 
 .site-list__item {
