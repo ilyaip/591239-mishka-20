@@ -500,18 +500,14 @@
   }
 }
 
-.order-form__input-contacts--iphone path {
-  opacity: 0.2;
-}
-
-.order-form__input-contacts:hover + .order-form__input-contacts--iphone path,
-.order-form__input-contacts:focus + .order-form__input-contacts--iphone path {
+.order-form__input-contacts:hover + .order-form__input-contacts--iphone,
+.order-form__input-contacts:focus + .order-form__input-contacts--iphone {
   fill: @light-green-2;
   opacity: 1;
 }
 
-.order-form__input-contacts:hover + .order-form__input-contacts--email path,
-.order-form__input-contacts:focus + .order-form__input-contacts--email path {
+.order-form__input-contacts:hover + .order-form__input-contacts--email,
+.order-form__input-contacts:focus + .order-form__input-contacts--email {
   fill: @light-green-2;
   opacity: 3;
 }
@@ -520,10 +516,7 @@
   position: absolute;
   right: 3px;
   top: 36px;
-
-  &:hover {
-    fill: @light-green-2;
-  }
+  opacity: 0.2;
 
   @media (min-width: @tablet-width) {
     top: 5px;
@@ -537,6 +530,7 @@
 }
 
 .order-form__input-contacts--iphone {
+  opacity: 0.2;
   position: absolute;
   right: 3px;
   top: 30px;
