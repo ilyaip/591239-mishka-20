@@ -1,3 +1,19 @@
+// я расставила все в более понятном порядке, таск билда перенесла вниз, чтобы было читаемо
+// 1. первый таск clean, в нем мы (если папка билд уже собрана, очищаем ее, чтобы следующая
+// сборка была правильной, без наслаивания файлов друг на друга) - все верно у тебя
+// 2. в copy я удалила строку с копированием файла html, так как нам не нужен старый файл html,
+// мы добавили новый таск для html
+// 3. таск server, baseDir: 'source' - заменила на build, так как проект открывается уже из папки build
+// папка source - рабочая, в ней мы все меняем, следим за ее изменениями, команда npx gulp build выполняет все
+// таски из этого файла, берет все файлы из source и компилит в build, а npx start - берет таск build, то есть выполняет
+// все аналогичное + запускает сервер и вотчер, который следит за изменениями и сервер перезагружает
+// 4. в вотчере строку gulp.watch("source/*.html").on("change", sync.reload); заменила. так как
+// теперь есть отдельный таск для html, который как раз обновляет html после каждого его изменения
+// 5. внутри build убрала кавычки + добавила последним таск html
+// 6. exports.default = gulp.series(
+//   build, server, watcher
+// ) это как раз npm start - то есть мы запускаем build сервер и вотчер
+
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -12,19 +28,7 @@ const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 const del = require("del");
 
-const build = gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "sprite",
-  "webp2",
-  "images"
-)
-
-exports.build = build;
-
 // Clean
-
 const clean = () => {
   return del("build");
 }
@@ -32,13 +36,11 @@ const clean = () => {
 exports.clean = clean;
 
 // Copy
-
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/js/**",
     "source/*.ico",
-    "source/*.html"
   ], {
     base: "source"
   })
@@ -47,8 +49,15 @@ const copy = () => {
 
 exports.copy = copy;
 
-// svg sprite
+// HTML
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("./build"))
+    .pipe(sync.stream());
+}
+exports.html = html;
 
+// svg sprite
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
   .pipe(svgstore())
@@ -59,7 +68,6 @@ const sprite = () => {
 exports.sprite = sprite;
 
 // webp
-
 const webp2 = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
@@ -69,7 +77,6 @@ const webp2 = () => {
 exports.webp2 = webp2;
 
 // images
-
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
@@ -77,12 +84,12 @@ const images = () => {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest('./build/img'));
+    .pipe(gulp.dest('build/img'));
 }
 exports.images = images;
 
-// Styles
 
+// Styles
 const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -102,11 +109,10 @@ const styles = () => {
 exports.styles = styles;
 
 // Server
-
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -118,12 +124,18 @@ const server = (done) => {
 exports.server = server;
 
 // Watcher
-
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 }
 
+// build
+const build = gulp.series(
+  clean, copy, styles, webp2, sprite, images, html
+);
+
+exports.build = build;
+
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 )
