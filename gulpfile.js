@@ -11,6 +11,8 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Clean
 const clean = () => {
@@ -23,7 +25,6 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**",
     "source/*.ico",
   ], {
     base: "source"
@@ -33,9 +34,19 @@ const copy = () => {
 
 exports.copy = copy;
 
+// JS
+const js = () => {
+  return gulp.src("source/js/script.js")
+  .pipe(uglify())
+  .pipe(rename("scripts.min.js"))
+  .pipe(gulp.dest("build/js"))
+}
+exports.js = js;
+
 // HTML
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./build"))
     .pipe(sync.stream());
 }
@@ -115,7 +126,7 @@ const watcher = () => {
 
 // build
 const build = gulp.series(
-  clean, copy, styles, webp2, sprite, images, html
+  clean, copy, styles, webp2, sprite, images, html, js
 );
 
 exports.build = build;
