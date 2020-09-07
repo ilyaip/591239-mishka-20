@@ -1,19 +1,3 @@
-// я расставила все в более понятном порядке, таск билда перенесла вниз, чтобы было читаемо
-// 1. первый таск clean, в нем мы (если папка билд уже собрана, очищаем ее, чтобы следующая
-// сборка была правильной, без наслаивания файлов друг на друга) - все верно у тебя
-// 2. в copy я удалила строку с копированием файла html, так как нам не нужен старый файл html,
-// мы добавили новый таск для html
-// 3. таск server, baseDir: 'source' - заменила на build, так как проект открывается уже из папки build
-// папка source - рабочая, в ней мы все меняем, следим за ее изменениями, команда npx gulp build выполняет все
-// таски из этого файла, берет все файлы из source и компилит в build, а npx start - берет таск build, то есть выполняет
-// все аналогичное + запускает сервер и вотчер, который следит за изменениями и сервер перезагружает
-// 4. в вотчере строку gulp.watch("source/*.html").on("change", sync.reload); заменила. так как
-// теперь есть отдельный таск для html, который как раз обновляет html после каждого его изменения
-// 5. внутри build убрала кавычки + добавила последним таск html
-// 6. exports.default = gulp.series(
-//   build, server, watcher
-// ) это как раз npm start - то есть мы запускаем build сервер и вотчер
-
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
@@ -27,6 +11,8 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Clean
 const clean = () => {
@@ -39,7 +25,6 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/**",
     "source/*.ico",
   ], {
     base: "source"
@@ -49,9 +34,19 @@ const copy = () => {
 
 exports.copy = copy;
 
+// JS
+const js = () => {
+  return gulp.src("source/js/script.js")
+  .pipe(uglify())
+  .pipe(rename("scripts.min.js"))
+  .pipe(gulp.dest("build/js"))
+}
+exports.js = js;
+
 // HTML
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./build"))
     .pipe(sync.stream());
 }
@@ -131,7 +126,7 @@ const watcher = () => {
 
 // build
 const build = gulp.series(
-  clean, copy, styles, webp2, sprite, images, html
+  clean, copy, styles, webp2, sprite, images, html, js
 );
 
 exports.build = build;

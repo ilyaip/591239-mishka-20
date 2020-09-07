@@ -16,6 +16,19 @@
   }
 }
 
+.modal-size--closed {
+  display: none;
+}
+
+.modal-size--absolute {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 1s;
+  background-color: @main-background-color;
+}
+
 .modal-size__title {
   .text-25-30();
   width: 156px;
@@ -97,5 +110,15 @@
 
   @media (min-width: @tablet-width) {
     width: 350px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(-2000px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
   }
 }
