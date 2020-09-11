@@ -1,8 +1,10 @@
 .order-form {
   margin-bottom: 54px;
+  margin-top: -35px;
 
   @media (min-width: @tablet-width) {
     margin-top: 50px;
+    margin-bottom: 45px;
 
     &::after {
       content: "";
@@ -32,6 +34,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 33px;
+
     &::after {
       top: 760px;
       min-height: 228px;
@@ -49,7 +53,7 @@
   text-align: left;
   width: 320px;
   margin-bottom: 28px;
-  margin-top: -10px;
+  margin-top: -12px;
 
   @media (min-width: @tablet-width) {
     padding-left: 50px;
@@ -80,7 +84,7 @@
 .order-form__group {
   padding: 0;
   border: none;
-  padding-bottom: 25px;
+  padding-bottom: 8px;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -125,7 +129,7 @@
   }
 }
 
-.order-form__title--email {
+.order-form__title-email {
   &::after {
     left: 80px;
     width: 180px;
@@ -163,8 +167,17 @@
   position: absolute;
 }
 
-.order-form__input--radio {
+.order-form__label--radio {
   position: relative;
+  padding-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 8px;
+  }
 
   &::before {
     content: "";
@@ -173,7 +186,7 @@
     background-size: 100%;
     width: 40px;
     height: 42px;
-    left: 0;
+    left: 3px;
     bottom: 30px;
 
     @media (min-width: @tablet-width) {
@@ -185,8 +198,12 @@
   }
 }
 
-.order-form__input--radio-2 {
+.order-form__label--radio-2 {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 8px;
+  }
 
   &::before {
     content: "";
@@ -195,22 +212,23 @@
     background-size: 100%;
     width: 40px;
     height: 42px;
-    left: 0;
+    left: 3px;
     bottom: 13px;
 
     @media (min-width: @tablet-width) {
       left: -80px;
       bottom: -16px;
       background: url("../img/radio-desktop-off.svg") no-repeat;
-      width: 55px;
+      width: 54px;
       height: 55px;
     }
   }
 }
 
-.order-form__input--checkbox {
+.order-form__label--checkbox {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-top: 13px;
 
   &::before {
     content: "";
@@ -219,7 +237,7 @@
     background-size: 100%;
     width: 38px;
     height: 39px;
-    left: 0;
+    left: 3px;
     bottom: 10px;
 
     @media (min-width: @tablet-width) {
@@ -246,7 +264,7 @@
   }
 }
 
-.order-form__item:nth-of-type(2n) .order-form__input--checkbox {
+.order-form__item:nth-of-type(2n) .order-form__label--checkbox {
   @media (min-width: @tablet-width) {
     margin-left: 230px;
   }
@@ -256,87 +274,87 @@
   }
 }
 
-.order-form__item:nth-of-type(4) .order-form__input--checkbox {
+.order-form__item:nth-of-type(4) .order-form__label--checkbox {
   margin-bottom: 13px;
 }
 
-.order-form__input:hover + .order-form__input--radio::before,
-.order-form__input:focus + .order-form__input--radio::before {
+.order-form__input:hover + .order-form__label--radio::before,
+.order-form__input:focus + .order-form__label--radio::before {
   background: url("../img/21-2.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked:hover + .order-form__input--radio::before,
-.order-form__input:checked:focus + .order-form__input--radio::before {
+.order-form__input:checked:hover + .order-form__label--radio::before,
+.order-form__input:checked:focus + .order-form__label--radio::before {
   background: url("../img/22.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked + .order-form__input--radio::before {
+.order-form__input:checked + .order-form__label--radio::before {
   background: url("../img/radio-desktopOn.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:active + .order-form__input--radio::before {
+.order-form__input:active + .order-form__label--radio::before {
   background: url("../img/23-3.svg") no-repeat;
   background-size: contain;
 }
 
-.order-form__input:checked:active + .order-form__input--radio::before {
+.order-form__input:checked:active + .order-form__label--radio::before {
   background: url("../img/24.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:hover + .order-form__input--radio-2::before,
-.order-form__input:focus + .order-form__input--radio-2::before {
-  background: url("../img/21-2.svg") no-repeat;
+.order-form__input:hover + .order-form__label--radio-2::before,
+.order-form__input:focus + .order-form__label--radio-2::before {
+  background: url("../img/007.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked:hover + .order-form__input--radio-2::before,
-.order-form__input:checked:focus + .order-form__input--radio-2::before {
+.order-form__input:checked:hover + .order-form__label--radio-2::before,
+.order-form__input:checked:focus + .order-form__label--radio-2::before {
   background: url("../img/22.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked + .order-form__input--radio-2::before {
+.order-form__input:checked + .order-form__label--radio-2::before {
   background: url("../img/2.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:active + .order-form__input--radio-2::before {
+.order-form__input:active + .order-form__label--radio-2::before {
   background: url("../img/23-3.svg") no-repeat;
   background-size: contain;
 }
 
-.order-form__input:checked:active + .order-form__input--radio-2::before {
+.order-form__input:checked:active + .order-form__label--radio-2::before {
   background: url("../img/24.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked + .order-form__input--checkbox::before {
+.order-form__input:checked + .order-form__label--checkbox::before {
   background: url("../img/3.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked:hover + .order-form__input--checkbox::before,
-.order-form__input:checked:focus + .order-form__input--checkbox::before {
+.order-form__input:checked:hover + .order-form__label--checkbox::before,
+.order-form__input:checked:focus + .order-form__label--checkbox::before {
   background: url("../img/32.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:hover + .order-form__input--checkbox::before,
-.order-form__input:focus + .order-form__input--checkbox::before {
+.order-form__input:hover + .order-form__label--checkbox::before,
+.order-form__input:focus + .order-form__label--checkbox::before {
   background: url("../img/31.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:active + .order-form__input--checkbox::before {
+.order-form__input:active + .order-form__label--checkbox::before {
   background: url("../img/33.svg") no-repeat;
   background-size: 100%;
 }
 
-.order-form__input:checked:active + .order-form__input--checkbox::before {
+.order-form__input:checked:active + .order-form__label--checkbox::before {
   background: url("../img/35.svg") no-repeat;
   background-size: 100%;
 }
@@ -353,6 +371,7 @@
     font-size: 19px;
     align-self: center;
     margin-right: 25px;
+    margin-top: 2px;
   }
 }
 
@@ -367,6 +386,7 @@
   width: 260px;
   margin-bottom: 22px;
   outline: none;
+  color: @light-black;
 
   &::placeholder {
     opacity: 0.3;
@@ -385,10 +405,24 @@
     width: 350px;
     padding-left: 20px;
     font-size: 19px;
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+    margin-top: 9px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 566px;
+    width: 555px;
+  }
+}
+
+.order-form__input-name1 {
+  @media (min-width: @tablet-width) {
+    margin-left: -52px;
+    width: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 605px;
   }
 }
 
@@ -402,6 +436,7 @@
   outline: none;
   font-size: 17px;
   line-height: 18px;
+  color: @light-black;
 
   &::placeholder {
     opacity: 0.3;
@@ -440,6 +475,7 @@
   font-size: 17px;
   line-height: 18px;
   outline: none;
+  color: @light-black;
 
   &::placeholder {
     opacity: 0.3;
@@ -457,6 +493,7 @@
   @media (min-width: @tablet-width) {
     width: 501px;
     font-size: 19px;
+    margin-top: -20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -470,16 +507,18 @@
   line-height: 16px;
   text-align: left;
   margin-top: 16px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 67px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 175px;
+    margin-top: 60px;
   }
 }
 
@@ -490,7 +529,7 @@
   margin-left: 5px;
 
   @media (min-width: @tablet-width) {
-    margin-top: -85px;
+    margin-top: -100px;
     margin-left: 0;
     width: 230px;
   }
@@ -500,21 +539,21 @@
   }
 }
 
-.order-form__input-contacts:hover + .order-form__input-contacts--iphone,
-.order-form__input-contacts:focus + .order-form__input-contacts--iphone {
+.order-form__input-contacts:hover + .order-form__input-contacts-iphone,
+.order-form__input-contacts:focus + .order-form__input-contacts-iphone {
   fill: @light-green-2;
   opacity: 1;
 }
 
-.order-form__input-contacts:hover + .order-form__input-contacts--email,
-.order-form__input-contacts:focus + .order-form__input-contacts--email {
+.order-form__input-contacts:hover + .order-form__input-contacts-email,
+.order-form__input-contacts:focus + .order-form__input-contacts-email {
   fill: @light-green-2;
   opacity: 3;
 }
 
-.order-form__input-contacts--email {
+.order-form__input-contacts-email {
   position: absolute;
-  right: 3px;
+  right: 7px;
   top: 36px;
   opacity: 0.2;
 
@@ -524,25 +563,25 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 200px;
-    top: 10px;
+    right: 180px;
+    top: 6px;
   }
 }
 
-.order-form__input-contacts--iphone {
+.order-form__input-contacts-iphone {
   opacity: 0.2;
   position: absolute;
-  right: 3px;
+  right: 10px;
   top: 30px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
-    right: 17px;
+    top: 3px;
+    right: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 200px;
-    top: 5px;
+    right: 180px;
+    top: 3px;
   }
 }
 
@@ -575,6 +614,15 @@
 
 .order-form__group:nth-of-type(2) .order-form__group-wrapper {
   display: flex;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+    width: 980px;
+  }
 }
 
 .order-form__group:nth-of-type(2) {
@@ -586,6 +634,10 @@
 
 .order-form__group:nth-of-type(2) .order-form__title {
   top: 10px;
+
+  @media (min-width: @desktop-width) {
+    top: -3px;
+  }
 }
 
 .order-form__group:nth-of-type(2) .order-form__list {
@@ -599,6 +651,10 @@
 
 .order-form__group:nth-of-type(2) .order-form__item {
   width: 280px;
+
+  @media (min-width: @desktop-width) {
+    width: 200px;
+  }
 }
 
 .order-form__group:nth-of-type(3) {
@@ -613,7 +669,8 @@
 
 .order-form__group:nth-of-type(3) .order-form__title {
   @media (min-width: @tablet-width) {
-    margin-top: 30px;
+    margin-top: 33px;
+    left: -5px;
   }
 }
 
@@ -634,7 +691,7 @@
   padding-left: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 70px;
+    margin-top: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -648,13 +705,35 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 12px;
+    left: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -3px;
+  }
+}
+
+.order-form__group:nth-of-type(3) .order-form__group-wrapper {
+  @media (min-width: @tablet-width) {
+    margin-top: -18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -30px;
   }
 }
 
 .order-form__group:nth-of-type(4) .order-form__group-wrapper {
+  margin-top: 15px;
+  margin-bottom: 18px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 43px;
   }
 }
 
@@ -668,13 +747,17 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 12px;
+    left: -5px;
   }
 }
 
 .order-form__group:nth-of-type(5) .order-form__group-wrapper {
+  margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-top: -5px;
   }
 }
 
@@ -689,11 +772,17 @@
 
 .order-form__group:nth-of-type(6) .order-form__title {
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    top: -10px;
+    left: -3px;
+  }
 }
 
 .order-form__group:nth-of-type(6) .order-form__group-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 }

@@ -1,0 +1,36 @@
+.social {
+  margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.social__list {
+  .style-none();
+  display: flex;
+  margin-left: 57px;
+  margin-right: 62px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    margin-right: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 255px;
+    width: 140px;
+  }
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    fill: @light-green-3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

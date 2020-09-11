@@ -1,4 +1,4 @@
-var menuToggle = document.querySelector(".main-nav__toggle");
+var menuToggle = document.querySelector(".page-header__toggle");
 var close = document.querySelector(".main-nav--closed");
 var nav = document.querySelector(".main-nav");
 var modal = document.querySelector(".modal-size");
@@ -16,13 +16,14 @@ nav.classList.add("main-nav--closed");
 
 menuToggle.onclick = function() {
   nav.classList.toggle("main-nav--closed");
-  menuToggle.classList.toggle("main-nav__toggle-1");
+  menuToggle.classList.toggle("page-header__toggle-1");
 }
 
 //Модалка выбора размера
 modal.classList.add("modal-size--closed");
 
 buttonSize.onclick = function() {
+  event.preventDefault();
   modal.classList.remove("modal-size--closed");
   modal.classList.add("modal-size--absolute");
 }

@@ -62,7 +62,7 @@
             <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Shop mishka">
           </picture>
         </a>
-        <button class="page-header__button main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <button class="page-header__button page-header__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
       <nav class="page-header__nav main-nav">
         <ul class="main-nav__list site-list">
@@ -73,9 +73,9 @@
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <div class="main-nav__delivery">
+        <p class="main-nav__delivery">
           Бесплатная доставка по России
-        </div>
+        </p>
         <div class="main-nav__sale-wrapper">
           <a href="" class="main-nav__new">
             Новые поступления
@@ -85,25 +85,23 @@
           </a>
         </div>
         <div class="main-nav__item">
-          <a href="#">
-            <form class="main-nav__form-form" action="http://echo.htmlacademy.ru/" method="post">
-              <input class="visually-hidden main-nav__form-search--none" name="site-search" id="search">
-              <label class="main-nav__form-label" for="search">Поиск по сайту</label>
-              <svg class="main-nav__form-search" width="18" height="18">
-                <use xlink:href="#index-icon-search"> </use>
-              </svg>
-            </form>
-          </a>
+          <form class="main-nav__form-form" action="http://echo.htmlacademy.ru/" method="post">
+            <input class="visually-hidden main-nav__display-none" name="site-search" id="search">
+            <label class="main-nav__form-label" for="search">Поиск по сайту</label>
+            <svg class="main-nav__form-search" width="18" height="18">
+              <use xlink:href="#index-icon-search"> </use>
+            </svg>
+          </form>
         </div>
         <div class="main-nav__item">
           <a class="main-nav__link" href="">Корзина: пока пуста</a>
-          <svg class="main-nav__item--cart" width="21" height="18">
+          <svg class="main-nav__item-cart" width="21" height="18">
             <use xlink:href="#index-icon-cart"></use>
           </svg>
         </div>
       </nav>
     </header>
-    <main class="page-main">
+    <main>
       <section class="catalog-products">
         <h1 class="page__title">Каталог товаров</h1>
         <ul class="catalog-product__list">
@@ -167,7 +165,7 @@
                 <h3 class="catalog-product__label">Большая корзинка для игрушек</h3>
               </a>
               <p class="catalog-product__text">Диаметр 30 см, высота 30 см</p>
-              <div class="catalog-product__urn-wrapper">
+              <div class="catalog-product__urn-wrapper catalog-product__urn-wrapper3">
                 <p class="catalog-product__cash">1 500 руб.</p>
                 <a class="catalog-product__urn" href="#" aria-label="Добавить товар в корзину"></a>
               </div>
@@ -232,7 +230,7 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу htmlacademy">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу htmlacademy">
             <svg width="27" height="35" viewBox="0 0 27 35">
               <use xlink:href="#icon-academy"></use>
             </svg>
