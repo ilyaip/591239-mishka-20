@@ -238,7 +238,6 @@
   text-transform: uppercase;
   display: block;
   width: 259px;
-  height: 52px;
   border: 2px solid @light-black;
   padding-top: 14px;
   box-sizing: border-box;
@@ -261,8 +260,17 @@
 }
 
 .product-week__button-order {
+  height: 100%;
+  min-height: 52px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    min-width: 292px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 4;
+    justify-self: start;
   }
 }

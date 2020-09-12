@@ -160,7 +160,10 @@
 }
 
 .reviews__button-write {
+  height: auto;
+  min-height: 52px;
   font-size: 18px;
+  width: auto;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
@@ -170,6 +173,7 @@
     margin-top: 30px;
     margin-left: auto;
     font-size: 17px;
-    width: 175px;
+    min-width: 175px;
+    align-self: flex-start;
   }
 }
